@@ -5,10 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PrePersist;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
@@ -19,8 +16,8 @@ import java.time.LocalDate;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@javax.persistence.Entity
-public class Entity {
+@Entity
+public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
